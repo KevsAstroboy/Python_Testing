@@ -3,12 +3,14 @@
         {
             "name": "Spring Festival",
             "date": "2023-03-27 10:00:00",
-            "numberOfPlaces": "25"
+            "numberOfPlaces": "25",
+            "image": "https://assets.stickpng.com/thumbs/5887c5a1bc2fc2ef3a186050.png"
         },
         {
             "name": "Fall Classic",
-            "date": "2023-10-22 13:30:00",
-            "numberOfPlaces": "13"
+            "date": "2023-01-28 13:30:00",
+            "numberOfPlaces": "13",
+            "image": "https://nghlhockey.com/wp-content/uploads/2022/07/Fall-Classic-Rochester.png"
         }
     ]
 }
