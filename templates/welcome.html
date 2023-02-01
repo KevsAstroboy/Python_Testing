@@ -16,11 +16,21 @@
       <a href="{{url_for('logout')}}" style="font-size:20px;color:black;"><i class='bx bx-log-out' ></i></a>
   </div>
 </nav>
-    <div class="container pt-5">
+    <div class="container pt-2">
         <h3 class="fw-bolder">Competitions</h3>
+        <h4 class="fw-bolder">Nombre de points : {{club['points']}}</h4>
+        </br>
+        {% with messages = get_flashed_messages()%}
+            {% if messages %}
+
+               {% for message in messages %}
+                    <h6>{{message}}</h6>
+                {% endfor %}
+            {% endif%}
+            {%endwith%}
         <div class="row d-flex justify-content-evenly pt-5">
             {% for comp in competitions %}
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 15rem;">
                   <img src="{{comp['image']}}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">{{comp['name']}}</h5>
