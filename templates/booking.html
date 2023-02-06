@@ -16,15 +16,17 @@
            <p class="lead text-center text-light mt-5" style="padding-top:15%">Please enter the number of places you want :</p>
            <form action="/purchasePlaces" method="post" style="text-align: center; padding:15px">
                <input type="hidden" name="club" value="{{club['name']}}">
-               <input type="hidden" name="competition" value="{{competition['name']}}">
+               <input type="hidden" name="competition" value="{{competition['name']}}" >
                <div class="wrapper" style="margin-left:25%">
                      <div class="input-data">
-                        <input type="number" name="places" id="">
+                        <input type="number" name="places" id="" max="{{club['points']}}" min="0">
                         <div class="underline"></div>
                         <label for="places">How many places?</label>
                      </div>
                </div>
+               {% if competition['numberOfPlaces'] | int  > 0 %}
                <button type="submit" class="btn btn-primary ">Book</button>
+               {% endif %}
            </form>
             {% with messages = get_flashed_messages()%}
             {% if messages %}

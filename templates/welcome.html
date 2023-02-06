@@ -37,8 +37,10 @@
                     <p class="card-text">Number of Places: {{comp['numberOfPlaces']}}</p>
                       <div class="row">
                           <p class="card-text">{{comp['date']}}</p>
+                          {% if comp['numberOfPlaces'] | int  > 0 %}
                           {% if today_date < comp['date'] %}
                             <a href="{{ url_for('book',competition=comp['name'],club=club['name']) }}" class="btn btn-secondary"><i class='bx bxs-map-pin' ></i>Book Places</a>
+                          {% endif %}
                           {% endif %}
                       </div>
 
