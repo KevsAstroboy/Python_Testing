@@ -11,6 +11,22 @@
 
        <div class="col-12 col-lg-4 bg-white">
             <h2 class="fw-bold  text-center" style="padding-top:40%">Welcome to the GUDLFT</br>Registration Portal!</h2>
+             <table class="table table-borderless m-4 ">
+  <thead>
+    <tr>
+      <th scope="col">Nom du club</th>
+      <th scope="col">Nombre de point</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for club in clubs %}
+    <tr>
+      <td>{{club['name']}}</td>
+      <td class="fw-bold">{{club['points']}}</td>
+    </tr>
+  {%endfor %}
+  </tbody>
+</table>
        </div>
        <div class="col-12 col-lg-8 bg-dark  side">
 
