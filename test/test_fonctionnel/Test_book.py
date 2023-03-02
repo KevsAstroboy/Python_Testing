@@ -1,6 +1,4 @@
 from bs4 import BeautifulSoup
-import json
-
 
 
 def test_booking_with_good_url(client):
@@ -12,7 +10,6 @@ def test_booking_with_good_url(client):
 
     for content in soup_content:
         assert assertion_check in content.get_text()
-
 
 
 def test_booking_with_bad_url(client):

@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
-import json
 
 
 def test_purchase_places_when_is_empty(client):
     from_data = {'places': ''}
-    assertion_check = "Veuillez bien renseigner le nombre de place que vous voulez réserver"
+    assertion_check = "Veuillez bien renseigner le " \
+                      "nombre de place que vous voulez réserver"
     response = client.post('/purchasePlaces', data=from_data)
 
     soup = BeautifulSoup(response.data, features="html.parser")
